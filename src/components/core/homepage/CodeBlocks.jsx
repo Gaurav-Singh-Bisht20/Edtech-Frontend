@@ -7,8 +7,11 @@ import { TypeAnimation } from 'react-type-animation'
 const CodeBlocks = ({
     position, heading, subheading, ctabtn1, ctabtn2, codeblock, backgroudGradient, codeColor
 }) => {
-  return (
-    <div className={`flex ${position} my-20 justify-between gap-10`}>
+    const gradientStyle = {
+        background: backgroudGradient ? `linear-gradient(to right, ${backgroudGradient.start}, ${backgroudGradient.end})` : '',
+      };
+    return (
+    <div className={`flex ${position} my-10 justify-between gap-[20px] border-[1px] border-r-richblack-25 p-5 ${gradientStyle}`}>
       
     {/*Section 1*/}
     <div className='w-[50%] flex flex-col gap-8'>
@@ -29,6 +32,7 @@ const CodeBlocks = ({
                     {ctabtn2.btnText}
             </CTAButton>
         </div>
+        
 
 
     </div>

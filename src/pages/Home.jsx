@@ -44,14 +44,17 @@ const Home = () => {
             </CTAButton>
         </div>
 
-        <div className='mx-3 my-12 shadow-blue-200'>
-            <video
+        <div className='mx-3 my-12 relative'>
+        <video
+            className='w-full h-auto'
             muted
             loop
             autoPlay
-            >
-            <source  src={Banner} type="video/mp4" />
-            </video>
+        >
+        <source src={Banner} type="video/mp4" />
+        </video>
+        <div className="absolute right-0 bottom-0 w-3 h-full bg-yellow-50 shadow-md"></div>
+        <div className="absolute right-0 bottom-0 w-full h-3 bg-yellow-50 shadow-md"></div>
         </div>
 
         {/* Code Section 1 */}
@@ -83,12 +86,17 @@ const Home = () => {
                     }
                 }
 
-                codeblock={`<<!DOCTYPE html>\n<html>\nhead><title>Example</title><linkrel="stylesheet"href="styles.css">\n/head>\n`}
+                codeblock={`<<!DOCTYPE html>\n<html>\n<head><title>Example</title><linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<div>\n<h1>Hello There</h1>\n</div>\n</body>\n</html>`}
                 codeColor={"text-yellow-25"}
+                backgroudGradient={{
+                    start: "yellow", // Change this to your desired starting color
+                    end: "orange",   // Change this to your desired ending color
+                  }}
+
             />
         </div>
 
-                {/* Code Section 2 */}
+        {/* Code Section 2 */}
         <div>
             <CodeBlocks 
                 position={"lg:flex-row-reverse"}
@@ -117,7 +125,7 @@ const Home = () => {
                     }
                 }
 
-                codeblock={`<<!DOCTYPE html>\n<html>\nhead><title>Example</title><linkrel="stylesheet"href="styles.css">\n/head>\n`}
+                codeblock={`<<!DOCTYPE html>\n<html>\n<head><title>Example</title><linkrel="stylesheet"href="styles.css">\n</head>\n<body>\n<div>\n<h1>Hello There</h1>\n</div>\n</body>\n</html>`}
                 codeColor={"text-yellow-25"}
             />
         </div>
@@ -125,7 +133,7 @@ const Home = () => {
       </div>
 
       {/*Section 2  */}
-
+                
 
       {/*Section 3 */}
 
