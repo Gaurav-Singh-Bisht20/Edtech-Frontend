@@ -1,39 +1,138 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { FaLongArrowAltRight } from "react-icons/fa";
-import HighlightedText from '../components/core/homepage/HighlightedText';
-import CTAbutton from '../components/core/homepage/CTAbutton';
+import {FaArrowRight} from "react-icons/fa"
+import {Link} from "react-router-dom"
+import HighlightedText from '../components/core/Homepage/HighlightedText'
+import CTAButton from "../components/core/Homepage/Button"
+import Banner from "../assets/Images/banner.mp4"
+import CodeBlocks from "../components/core/Homepage/CodeBlocks"
 
 const Home = () => {
   return (
     <div>
-    {/*Section1*/}
-    <div className ="relative mx-auto flex  flex-col items-center w-8/12 text-white  bg-richblack-800 h-screen " >
-        <Link to={"/signUp"}>
-        <div className='mt-12 p-1 rounded-full bg-richblack-800 transition-all duration-200 group '>
-            <div className='px-8 py-2 flex items-center font-bold gap-2 text-richblack-200 group-hover:bg-richblack-900 rounded-full '>
-                <p>become an Instructor</p>
-                <FaLongArrowAltRight/>
+      {/*Section1  */}
+      <div className='relative mx-auto flex flex-col w-10/12 max-w-maxContent items-center 
+      text-white justify-between'>
+
+        <Link to={"/signup"}>
+            <div className=' group mt-12 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200
+            transition-all duration-200 hover:scale-95 w-fit'>
+                <div className='flex flex-row items-center gap-2 rounded-full px-10 py-[5px]
+                transition-all duration-200 group-hover:bg-richblack-900'>
+                    <p>Become an Instructor</p>
+                    <FaArrowRight />
+                </div> 
             </div>
-        </div>
-            
+
         </Link>
 
-        <div className='mt-5 text-4xl'>
-          <h1 className='font-bold'>Empower your future with  <HighlightedText text = {"EDUXCEL"}/></h1>
+        <div className='text-center text-4xl font-semibold mt-7'>
+            Empower Your Future with
+            <HighlightedText text={"Coding Skills"} />
         </div>
 
-        <div className='mt-4 text-lg  '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, voluptatum alias obcaecati perferendis <br/> nisi perspiciatis repellat exercitationem accusamus nobis, distinctio esse quam aperiam aliquam ratione.</div>
-
-        <div className='flex mt-5 gap-5'>
-          <CTAbutton active={true} linkto={"/signUp"}>Leran More</CTAbutton>
-          <CTAbutton linkto={"/signUp"} active={false}>Book a Demo</CTAbutton>
+        <div className=' mt-4 w-[90%] text-center text-lg font-bold text-richblack-300'>
+            With our online coding courses, you can learn at your own pace, from anywhere in the world, and get access to a wealth of resources, including hands-on projects, quizzes, and personalized feedback from instructors. 
         </div>
 
-    </div>
-    {/*Section2*/}
-    {/*Section3*/}
-    {/*Section4*/}
+        <div className='flex flex-row gap-7 mt-8'>
+            <CTAButton active={true} linkto={"/signup"}> 
+                Learn More
+            </CTAButton>
+
+            <CTAButton active={false} linkto={"/login"}> 
+                Book a Demo
+            </CTAButton>
+        </div>
+
+        <div className='mx-3 my-12 shadow-blue-200'>
+            <video
+            muted
+            loop
+            autoPlay
+            >
+            <source  src={Banner} type="video/mp4" />
+            </video>
+        </div>
+
+        {/* Code Section 1 */}
+        <div>
+            <CodeBlocks 
+                position={"lg:flex-row"}
+                heading={
+                    <div className='text-4xl font-semibold'>
+                        Unlock Your
+                        <HighlightedText text={"coding potential"}/>
+                        with our online courses
+                    </div>
+                }
+                subheading = {
+                    "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+                }
+                ctabtn1={
+                    {
+                        btnText: "try it yourself",
+                        linkto: "/signup",
+                        active: true,
+                    }
+                }
+                ctabtn2={
+                    {
+                        btnText: "learn more",
+                        linkto: "/login",
+                        active: false,
+                    }
+                }
+
+                codeblock={`<<!DOCTYPE html>\n<html>\nhead><title>Example</title><linkrel="stylesheet"href="styles.css">\n/head>\n`}
+                codeColor={"text-yellow-25"}
+            />
+        </div>
+
+                {/* Code Section 2 */}
+        <div>
+            <CodeBlocks 
+                position={"lg:flex-row-reverse"}
+                heading={
+                    <div className='text-4xl font-semibold'>
+                        Unlock Your
+                        <HighlightedText text={"coding potential"}/>
+                        with our online courses
+                    </div>
+                }
+                subheading = {
+                    "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+                }
+                ctabtn1={
+                    {
+                        btnText: "try it yourself",
+                        linkto: "/signup",
+                        active: true,
+                    }
+                }
+                ctabtn2={
+                    {
+                        btnText: "learn more",
+                        linkto: "/login",
+                        active: false,
+                    }
+                }
+
+                codeblock={`<<!DOCTYPE html>\n<html>\nhead><title>Example</title><linkrel="stylesheet"href="styles.css">\n/head>\n`}
+                codeColor={"text-yellow-25"}
+            />
+        </div>
+
+      </div>
+
+      {/*Section 2  */}
+
+
+      {/*Section 3 */}
+
+
+      {/*Footer */}
+
+
     </div>
   )
 }
