@@ -5,13 +5,16 @@ import HighlightedText from '../components/core/Homepage/HighlightedText'
 import CTAButton from "../components/core/Homepage/Button"
 import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from "../components/core/Homepage/CodeBlocks"
+import InstructorSection from '../components/core/Homepage/InstructorSection'
+import LearningCards from '../components/core/Homepage/LearningCards'
+import TimelineSection from '../components/core/Homepage/TimelineSection'
 
 const Home = () => {
   return (
     <div>
       {/*Section1  */}
       <div className='relative mx-auto flex flex-col w-10/12 max-w-maxContent items-center 
-      text-white justify-between'>
+      text-white justify-between mb-10'>
 
         <Link to={"/signup"}>
             <div className=' group mt-12 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200
@@ -133,6 +136,61 @@ const Home = () => {
       </div>
 
       {/*Section 2  */}
+      <div className='bg-pure-greys-5 text-richblack-700  '>
+            <div className='homepage_bg h-[200px]'>
+                    <div className='w-10/12  max-w-maxContent flex flex-col gap-5 items-center justify-center mx-auto'>
+                        <div className='h-[80px]'></div>
+                        <div className='flex gap-10 text-white '>
+                            <CTAButton active={true} linkto={"/signup"}>
+                                <div className='flex gap-3 items-center'>
+                                    Explore the catalog
+                                    <FaArrowRight></FaArrowRight>
+                                </div>
+                            </CTAButton>
+                            <CTAButton active={false} linkto={"/signup"}>
+                                <div className='flex gap-3 items-center'>
+                                    Learn More
+                                </div>
+                            </CTAButton>
+                        </div>
+                    </div>
+            </div>
+        
+            <div className='flex mx-auto w-10/12 mt-10 gap-10  '>
+                    <div className='text-3xl font-bold w-1/2 '>
+                        Get the skill you need for a 
+                        {" "}
+                        <HighlightedText text={"job that is in demand"}/>
+                    </div>
+                    <div className=' flex flex-col justify-between items-start gap-4'>
+                        <div className='font-[14px] '>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quisquam.lorem2 
+                        </div>
+                        <CTAButton active={true} linkto={"/signup"}>Learn More</CTAButton>
+                    </div>
+            </div>
+
+           <TimelineSection/>
+
+            <div className='flex  flex-col gap-5 mt-12 mx-auto items-center justify-center w-10/12 max-w-maxContent'>
+                <div className='text-3xl font-bold'>Your Swiss knife of {" "}
+                    <HighlightedText text={"learning any language"}/>
+                </div>
+                <p className='text-[14px] text-center tracking-[1px]'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, illum Lorem ipsum dolor <br/>sit amet consectetur adipisicing elit. Impedit, hic?!
+                </p>
+            </div>
+
+            <LearningCards/>
+
+            <div  className='bg-pure-grays-5 h-40 flex items-center justify-center '>
+                <div className=' flex justify-center items-center  w-10/12'>
+                    <CTAButton active={true} linkto={"/signup"}>Learn More</CTAButton>
+                </div>
+            </div>
+        </div>  
+
+        <InstructorSection/>
                 
 
       {/*Section 3 */}
