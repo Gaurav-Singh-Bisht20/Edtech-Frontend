@@ -8,6 +8,7 @@ import CodeBlocks from "../components/core/Homepage/CodeBlocks"
 import InstructorSection from '../components/core/Homepage/InstructorSection'
 import LearningCards from '../components/core/Homepage/LearningCards'
 import TimelineSection from '../components/core/Homepage/TimelineSection'
+import Footer from '../components/common/Footer'
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       {/*Section1  */}
       <div className='relative mx-auto flex flex-col w-10/12 max-w-maxContent items-center 
       text-white justify-between mb-10'>
-
+    
         <Link to={"/signup"}>
             <div className=' group mt-12 p-1 mx-auto rounded-full bg-richblack-800 font-bold text-richblack-200
             transition-all duration-200 hover:scale-95 w-fit'>
@@ -29,7 +30,7 @@ const Home = () => {
         </Link>
 
         <div className='text-center text-4xl font-semibold mt-7'>
-            Empower Your Future with
+            Empower Your Future with {" "}
             <HighlightedText text={"Coding Skills"} />
         </div>
 
@@ -197,7 +198,7 @@ const Home = () => {
 
 
       {/*Footer */}
-
+      <Footer />
 
     </div>
   )
