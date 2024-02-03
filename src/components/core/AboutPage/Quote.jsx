@@ -1,11 +1,11 @@
 import React from 'react'
-import HighlightText from '../HomePage/HighlightText'
+import HighlightedText from '../Homepage/HighlightedText'
 
 const Quote = () => {
   return (
     <div>
       We are passionate about revolutionizing the way we learn. Our innovative platform
-      <HighlightText text={"combines technology"}/>
+      <HighlightedText text={"combines technology"}/>
       <span className='text-brown-500'>
         {" "}
         expertise

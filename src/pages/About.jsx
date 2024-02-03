@@ -1,5 +1,5 @@
 import React from 'react'
-import HighlightText from "../components/core/HomePage/HighlightText"
+import HighlightedText from "../components/core/Homepage/HighlightedText"
 import BannerImage1 from "../assets/Images/aboutus1.webp"
 import BannerImage2 from "../assets/Images/aboutus2.webp"
 import BannerImage3 from "../assets/Images/aboutus3.webp"
@@ -18,7 +18,7 @@ const About = () => {
         <div>
             <header>
                 Driving Innovation in Online Education for a 
-                <HighlightText text={"Brighter Future"}/>
+                <HighlightedText text={"Brighter Future"}/>
                 <p>Studynotion is at the forefront of driving innovation in online education. We're passionate about creating a brighter future by offering cutting-edge courses, leveraging emerging technologies, and nurturing a vibrant learning community.</p>
             </header>
             <div className='flex gap-x-3 mx-auto'>
