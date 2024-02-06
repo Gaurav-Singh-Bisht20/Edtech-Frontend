@@ -17,7 +17,7 @@ const About = () => {
       <section className="bg-richblack-700">
         <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-center text-white">
           <header className="mx-auto py-20 text-4xl font-semibold lg:w-[70%]">
-            Driving Innovation in Online Education for a
+            Driving Innovation in Online Education for a {" "}
             <HighlightedText text={"Brighter Future"} />
             <p className="mx-auto mt-3 text-center text-base font-medium text-richblack-300 lg:w-[95%]">
               Studynotion is at the forefront of driving innovation in online
