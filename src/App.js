@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
 import Cart from "./components/core/Dashboard/Cart";
 import { ACCOUNT_TYPE } from "./utils/constants";
+import AddCourse from "./components/core/Dashboard/AddCourses/AddCourse"
 
 function App() {
 
@@ -42,7 +43,7 @@ function App() {
             </OpenRoute>
           }
         />
-    <Route
+      <Route
           path="login"
           element={
             <OpenRoute>
@@ -51,7 +52,7 @@ function App() {
           }
         />
 
-    <Route
+      <Route
           path="forgot-password"
           element={
             <OpenRoute>
@@ -95,18 +96,26 @@ function App() {
         </PrivateRoute>
       }
     >
-      <Route path="dashboard/my-profile" element={<MyProfile />} />
-      <Route path="dashboard/Settings" element={<Settings />} />
+    <Route path="dashboard/my-profile" element={<MyProfile />} />
+    <Route path="dashboard/Settings" element={<Settings />} />
       
 
-      {
-        user?.accountType === ACCOUNT_TYPE.STUDENT && (
-          <>
-          <Route path="dashboard/cart" element={<Cart />} />
-          <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
-          </>
-        )
-      }
+    {
+      user?.accountType === ACCOUNT_TYPE.STUDENT && (
+        <>
+        <Route path="dashboard/cart" element={<Cart />} />
+        <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
+        </>
+      )
+    }
+
+    {
+      user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
+        <>
+        <Route path="dashboard/Add-course" element={<AddCourse/>} />
+        </>
+      )
+    }
 
 
     </Route>
