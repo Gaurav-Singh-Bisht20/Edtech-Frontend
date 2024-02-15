@@ -1,54 +1,62 @@
 import React from 'react'
+import { FaCheck } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
-import CourseInfoForm from './CourseInfo/CourseInfoForm'
-import { FaCheck } from "react-icons/fa";
-
+import CourseBuilderForm from './CourseBuilder/CourseBuilderForm';
+import CourseInformationForm from './CourseBuilder/CourseBuilderForm';
 
 const RenderSteps = () => {
-  const {step}= useSelector((state)=>state.course)
 
-  const steps =[
-    {
-      id:1,
-      title:"Course Information"
-    },
-    {
-      id:2,
-      title:"Course builder"
-    },
-    {
-      id:3,
-      title:"Publish"
-    }
-  ]
-  return (<div>
-   <div>
-  {steps.map((item) => (
-    <div className={`${step === item.id ? "bg-yellow-900 border-yellow-25 text-yellow-50" : "border-richblack-700 bg-richblack-800 text-richblack-300"}`}>
-      {
-        step > item.id ? (<FaCheck />) : (item.id)
-      }
-    </div>
-  ))}
-  </div>
+    const {step} = useSelector((state)=> state.course);
 
-    <div>
-      {steps.map((item)=>{
+    const steps = [
+        {
+            id:1,
+            title: "Course Information",
+        },
+        {
+            id:2,
+            title: "Course Builder",
+        },
+        {
+            id:3,
+            title: "Publish",
+        },
+    ]
+
+  return (
+    <>
         <div>
-          <p>{item.title}</p>
+            {steps.map( (item) => (
+                <>
+                    <div>
+                        <div className={`${step === item.id 
+                        ? "bg-yellow-900 border-yellow-50 text-yellow-50" 
+                        : "border-richblack-700 bg-richblack-800 text-richblack-300"}`}>
+
+                        {
+                            step > item.id ? (<FaCheck/>) :(item.id)
+                        }
+
+                        </div>
+                    </div>
+                   {/* Add COde for dashes between the labels */}
+                </>
+            ) )}
         </div>
-      })}
-    </div>
-    {
-      step===1 && <CourseInfoForm/>
-    }
-    {/* {
-      step===2 && <CourseBuilderForm/>
-    }
-    {
-      step===3 && <PublishCourse/>
-    } */}
-  </div>
+        <div>
+            {steps.map((item) => (
+                <>
+                    <div>
+                        <p>{item.title}</p>
+                    </div>
+                </>
+            ))}
+        </div>
+
+        {step === 1 && <CourseInformationForm />}
+        {step === 2 && <CourseBuilderForm/>}
+        {/* {step===3 && <PublishCourse/>} */}
+    </>
   )
 }
 
