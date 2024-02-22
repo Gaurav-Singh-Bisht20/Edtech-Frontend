@@ -1,8 +1,8 @@
 import React from 'react'
 import {FaArrowRight} from "react-icons/fa"
 import {Link} from "react-router-dom"
-import HighlightedText from '../components/core/Homepage/HighlightedText'
-import CTAButton from "../components/core/Homepage/Button"
+import HighlightText from '../components/core/Homepage/HighlightText'
+import CTAbutton from "../components/core/Homepage/CTAbutton"
 import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from "../components/core/Homepage/CodeBlocks"
 import TimelineSection from "../components/core/Homepage/TimelineSection"
@@ -34,7 +34,7 @@ const Home = () => {
 
         <div className='text-center text-4xl font-semibold mt-7'>
             Empower Your Future with
-            <HighlightedText text={"Coding Skills"} />
+            <HighlightText text={"Coding Skills"} />
         </div>
 
         <div className=' mt-4 w-[90%] text-center text-lg font-bold text-richblack-300'>
@@ -42,13 +42,13 @@ const Home = () => {
         </div>
 
         <div className='flex flex-row gap-7 mt-8'>
-            <CTAButton active={true} linkto={"/signup"}> 
+            <CTAbutton active={true} linkto={"/signup"}> 
                 Learn More
-            </CTAButton>
+            </CTAbutton>
 
-            <CTAButton active={false} linkto={"/login"}> 
+            <CTAbutton active={false} linkto={"/login"}> 
                 Book a Demo
-            </CTAButton>
+            </CTAbutton>
         </div>
 
         <div className='mx-3 my-12 shadow-blue-200'>
@@ -68,7 +68,7 @@ const Home = () => {
                 heading={
                     <div className='text-4xl font-semibold'>
                         Unlock Your
-                        <HighlightedText text={"coding potential"}/>
+                        <HighlightText text={"coding potential"}/>
                         with our online courses
                     </div>
                 }
@@ -102,7 +102,7 @@ const Home = () => {
                 heading={
                     <div className='text-4xl font-semibold'>
                         Unlock Your
-                        <HighlightedText text={"coding potential"}/>
+                        <HighlightText text={"coding potential"}/>
                         with our online courses
                     </div>
                 }
@@ -139,18 +139,18 @@ const Home = () => {
                 <div className='w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto'>
                     <div className='h-[150px]'></div>
                     <div className='flex flex-row gap-7 text-white '>
-                        <CTAButton active={true} linkto={"/signup"}>
+                        <CTAbutton active={true} linkto={"/signup"}>
                             <div className='flex items-center gap-3' >
                                 Explore Full Catalog
                                 <FaArrowRight />
                             </div>
                             
-                        </CTAButton>
-                        <CTAButton active={false} linkto={"/signup"}>
+                        </CTAbutton>
+                        <CTAbutton active={false} linkto={"/signup"}>
                             <div>
                                 Learn more
                             </div>
-                        </CTAButton>
+                        </CTAbutton>
                     </div>
 
                 </div>
@@ -163,18 +163,18 @@ const Home = () => {
                 <div className='flex flex-row gap-5 mb-10 mt-[95px]'>
                     <div className='text-4xl font-semibold w-[45%]'>
                         Get the Skills you need for a
-                        <HighlightedText text={"Job that is in demand"} />
+                        <HighlightText text={"Job that is in demand"} />
                     </div>
 
                     <div className='flex flex-col gap-10 w-[40%] items-start'>
                     <div className='text-[16px]'>
                     The modern StudyNotion is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.
                     </div>
-                    <CTAButton active={true} linkto={"/signup"}>
+                    <CTAbutton active={true} linkto={"/signup"}>
                         <div>
                             Learn more
                         </div>
-                    </CTAButton>
+                    </CTAbutton>
                     </div>
 
                 </div>

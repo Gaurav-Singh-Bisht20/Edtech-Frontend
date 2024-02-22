@@ -24,7 +24,7 @@ function loadScript(src) {
 }
 
 
-export async function buyCourse(token, courses, userDetails, navigate, dispatch) {
+export async function BuyCourse(token, courses, userDetails, navigate, dispatch) {
     const toastId = toast.loading("Loading...");
     try{
         //load the script

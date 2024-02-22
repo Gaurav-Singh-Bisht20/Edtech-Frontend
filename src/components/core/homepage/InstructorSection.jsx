@@ -1,7 +1,7 @@
 import React from 'react'
 import Instructor from "../../../assets/Images/Instructor.png"
-import HighlightedText from './HighlightedText'
-import CTAButton from "../Homepage/Button"
+import HighlightText from './HighlightText'
+import CTAbutton from "../Homepage/CTAbutton"
 import { FaArrowRight } from 'react-icons/fa'
 
 const InstructorSection = () => {
@@ -20,7 +20,7 @@ const InstructorSection = () => {
         <div className='w-[50%] flex flex-col gap-10'>
             <div className='text-4xl font-semobold w-[50%]'>
                 Become an
-                <HighlightedText text={"Instructor"} />
+                <HighlightText text={"Instructor"} />
             </div>
 
             <p className='font-medium text-[16px] w-[80%] text-richblack-300'>
@@ -28,12 +28,12 @@ const InstructorSection = () => {
             </p>
 
             <div className='w-fit'>
-                <CTAButton active={true} linkto={"/signup"}>
+                <CTAbutton active={true} linkto={"/signup"}>
                     <div className='flex flex-row gap-2 items-center'>
                         Start Learning Today
                         <FaArrowRight />
                     </div>
-                </CTAButton>
+                </CTAbutton>
             </div>
 
 

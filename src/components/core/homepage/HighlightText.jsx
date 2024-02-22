@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HighlightedText = ({text}) => {
+const HighlightText = ({text}) => {
   return (
     <span className='text-caribbeangreen-100 font-bold'>
         {text}
@@ -8,4 +8,4 @@ const HighlightedText = ({text}) => {
   )
 }
 
-export default HighlightedText
+export default HighlightText

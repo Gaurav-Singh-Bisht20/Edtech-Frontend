@@ -1,9 +1,9 @@
 import React from 'react'
-import HighlightedText from './HighlightedText'
+import HighlightText from './HighlightText'
 import know_your_progress  from "../../../assets/Images/Know_your_progress.png"
 import compare_with_others from "../../../assets/Images/Compare_with_others.png"
 import plan_your_lesson from "../../../assets/Images/Plan_your_lessons.png"
-import CTAButton from "./Button"
+import CTAbutton  from "./CTAbutton"
 
 const LearningLanguageSection = () => {
   return (
@@ -12,7 +12,7 @@ const LearningLanguageSection = () => {
 
             <div className='text-4xl font-semibold text-center'>
                 Your Swiss Knife for
-                <HighlightedText text={" learning any language"} />
+                <HighlightText text={" learning any language"} />
             </div>
 
             <div className='text-center text-richblack-600 mx-auto text-base font-medium w-[70%]'>
@@ -38,11 +38,11 @@ const LearningLanguageSection = () => {
             </div>
 
             <div className='w-fit'>
-                <CTAButton active={true} linkto={"/signup"}>
+                <CTAbutton active={true} linkto={"/signup"}>
                     <div>
                         Learn more
                     </div>
-                </CTAButton>
+                </CTAbutton>
             </div>
 
       </div>
