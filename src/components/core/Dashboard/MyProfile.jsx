@@ -1,14 +1,14 @@
 import { RiEditBoxLine } from "react-icons/ri"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-
 import { formattedDate } from "../../../utils/dateFormatter"
 import IconBtn from "../../common/IconBtn"
 
 export default function MyProfile() {
   const { user } = useSelector((state) => state.profile)
   const navigate = useNavigate()
-
+  console.log(user);
+  console.log("profile page")
   return (
     <>
       <h1 className="mb-14 text-3xl font-medium text-richblack-5">
