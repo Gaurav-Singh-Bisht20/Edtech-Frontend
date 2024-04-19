@@ -42,16 +42,17 @@ const Home = () => {
         </div>
 
         <div className='flex flex-row gap-7 mt-8'>
-            <CTAbutton active={true} linkto={"/signup"}> 
-                Learn More
+            <CTAbutton active={true} > 
+            <Link to="/signup">Learn More</Link>
             </CTAbutton>
 
-            <CTAbutton active={false} linkto={"/login"}> 
-                Book a Demo
+            <CTAbutton active={false}>
+                <Link to="/signup"> Book a Demo</Link>
+               
             </CTAbutton>
         </div>
 
-        <div className='mx-3 my-12 shadow-blue-200'>
+        {/* <div className='mx-3 my-12 shadow-blue-200'>
             <video
             muted
             loop
@@ -59,7 +60,7 @@ const Home = () => {
             >
             <source  src={Banner} type="video/mp4" />
             </video>
-        </div>
+        </div> */}
 
         {/* Code Section 1 */}
         <div>
