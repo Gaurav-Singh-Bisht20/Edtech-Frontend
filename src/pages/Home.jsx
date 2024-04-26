@@ -1,7 +1,7 @@
 import React from 'react'
 import {FaArrowRight} from "react-icons/fa"
 import {Link} from "react-router-dom"
-import HighlightText from '../components/core/Homepage/HighlightText.jsx'
+import ColoredText from '../components/core/Homepage/ColoredText.jsx'
 import CTAbutton from "../components/core/Homepage/CTAbutton"
 import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from "../components/core/Homepage/CodeBlocks"
@@ -34,7 +34,7 @@ const Home = () => {
 
         <div className='text-center text-4xl font-semibold mt-7'>
             Empower Your Future with
-            <HighlightText text={"Coding Skills"} />
+            <ColoredText text={"Coding Skills"} />
         </div>
 
         <div className=' mt-4 w-[90%] text-center text-lg font-bold text-richblack-300'>
@@ -69,7 +69,7 @@ const Home = () => {
                 heading={
                     <div className='text-4xl font-semibold'>
                         Unlock Your
-                        <HighlightText text={"coding potential"}/>
+                        <ColoredText text={"coding potential"}/>
                         with our online courses
                     </div>
                 }
@@ -103,7 +103,7 @@ const Home = () => {
                 heading={
                     <div className='text-4xl font-semibold'>
                         Unlock Your
-                        <HighlightText text={"coding potential"}/>
+                        <ColoredText text={"coding potential"}/>
                         with our online courses
                     </div>
                 }
@@ -164,7 +164,7 @@ const Home = () => {
                 <div className='flex flex-row gap-5 mb-10 mt-[95px]'>
                     <div className='text-4xl font-semibold w-[45%]'>
                         Get the Skills you need for a
-                        <HighlightText text={"Job that is in demand"} />
+                        <ColoredText text={"Job that is in demand"} />
                     </div>
 
                     <div className='flex flex-col gap-10 w-[40%] items-start'>
