@@ -38,7 +38,7 @@
   },
   "author": "Gaurav singh",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_OPTIONS=--max-old-space-size=4096 react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "server": "cd Edtech && npm run dev",
