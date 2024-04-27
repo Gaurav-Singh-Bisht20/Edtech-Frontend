@@ -1,9 +1,9 @@
 import React from 'react'
-import ColoredText from './ColoredText.jsx'
 import know_your_progress  from "../../../assets/Images/Know_your_progress.png"
 import compare_with_others from "../../../assets/Images/Compare_with_others.png"
 import plan_your_lesson from "../../../assets/Images/Plan_your_lessons.png"
 import CTAbutton  from "./CTAbutton"
+import ColoredText from './ColoredText'
 
 const LearningLanguageSection = () => {
   return (

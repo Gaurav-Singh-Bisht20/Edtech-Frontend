@@ -1,8 +1,8 @@
 import React from 'react'
 import Instructor from "../../../assets/Images/Instructor.png"
-import ColoredText from './ColoredText.jsx'
 import CTAbutton from "../Homepage/CTAbutton"
 import { FaArrowRight } from 'react-icons/fa'
+import ColoredText from './ColoredText'
 
 const InstructorSection = () => {
   return (

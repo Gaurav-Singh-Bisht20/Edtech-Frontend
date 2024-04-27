@@ -1,5 +1,5 @@
 import React from 'react'
-import ColoredText from '../Homepage/ColoredText.jsx'
+import ColoredText from '../Homepage/ColoredText'
 
 const Quote = () => {
   return (
